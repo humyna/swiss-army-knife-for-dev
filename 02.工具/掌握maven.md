@@ -88,11 +88,11 @@ Maven项目构建过程中，主要构建命令有几种：
 
 执行后面的命令会自动执行前面的命令，比如执行mvn package时会执行validate、clean、compile、test、package五个阶段。
 
-![image-20221111120723208](/Users/uh/Documents/sourcecode/github/swiss-army-knife-for-dev/pics/image-20221111120723208.png)
+![image-20221111120723208](../pics/image-20221111120723208.png)
 
 
 
-![构建生命周期](/Users/uh/Documents/sourcecode/github/swiss-army-knife-for-dev/pics/image-20221121232141841.png)
+![构建生命周期](../pics/image-20221121232141841.png)
 
 ### phase（阶段）
 
@@ -174,7 +174,7 @@ mvn clean dependency:copy-dependencies package
 
 A **->** B **->** C，即A对B是第一直接依赖，B对C是第二直接依赖，A对C是传递性依赖，第一直接依赖（简称F）和第二直接依赖（简称S）的范围决定了传递性依赖（简称T）的范围。如图所示：
 
-![传递性依赖](/Users/uh/Documents/sourcecode/github/swiss-army-knife-for-dev/pics/image-20221122065915827.png)
+![传递性依赖](../pics/image-20221122065915827.png)
 
 结论：
 
@@ -329,7 +329,7 @@ Maven根据项目的pom.xml文件，把它转化成项目对象模型(POM)，这
 
 在clean，compile，test，package等生命周期阶段都有相应的Plug-in来做这些事情，而这些Plug-in会产生一些中间产物。
 
-![Maven概念模型](/Users/uh/Documents/sourcecode/github/swiss-army-knife-for-dev/pics/image-20221121231053156.png)
+![Maven概念模型](../pics/image-20221121231053156.png)
 
 ## 依赖解析机制
 
@@ -351,7 +351,7 @@ Maven项目由一个自己默认的配置，使用者不需要修改那些约定
 
 动态web的Maven项目的目录约定如下图所示：
 
-![Maven项目目录约定](/Users/uh/Documents/sourcecode/github/swiss-army-knife-for-dev/pics/image-20221121231025693.png)
+![Maven项目目录约定](../pics/image-20221121231025693.png)
 
 ### 命令行
 
@@ -372,7 +372,7 @@ archetype:generate：生成maven项目骨架
 
 自动创建的maven项目结构如下：
 
-![image-20221121231007491](/Users/uh/Documents/sourcecode/github/swiss-army-knife-for-dev/pics/image-20221121231007491.png)
+![image-20221121231007491](../pics/image-20221121231007491.png)
 
 ### Eclipse IDE
 
@@ -382,7 +382,7 @@ Eclipse提供了一个很好的插件m2eclipse无缝将Maven和Eclipse集成在�
 
 完成后目录结构如下：
 
-![image-20221121230937573](/Users/uh/Documents/sourcecode/github/swiss-army-knife-for-dev/pics/image-20221121230937573.png)
+![image-20221121230937573](../pics/image-20221121230937573.png)
 
 ### Idea IDE
 
@@ -420,13 +420,13 @@ Finish完成maven web项目创建。
 
 1. 我们使用 idea 自带的 maven 查看到有冲突的 jar，通过 Show Dependencies…查看具体的依赖关系如下图：
 
-![image-20221121230810237](/Users/uh/Documents/sourcecode/github/swiss-army-knife-for-dev/pics/image-20221121230810237.png)
+![image-20221121230810237](../pics/image-20221121230810237.png)
 
 
 
 2. 通过命令`mvn dependency:tree`查看依赖树，把有红线依赖关系进行处理。或者通过 maven helper 插件分析依赖关系。如下图，红线部分即是有版本冲突的依赖。
 
-![image-20221121230845669](/Users/uh/Documents/sourcecode/github/swiss-army-knife-for-dev/pics/image-20221121230845669.png)
+![image-20221121230845669](../pics/image-20221121230845669.png)
 
 3. 解决冲突
 
@@ -434,7 +434,7 @@ Finish完成maven web项目创建。
 
 如下图所示：
 
-![image-20221121230906389](/Users/uh/Documents/sourcecode/github/swiss-army-knife-for-dev/pics/image-20221121230906389.png)
+![image-20221121230906389](../pics/image-20221121230906389.png)
 
 
 
